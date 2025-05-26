@@ -1,0 +1,19 @@
+global:
+route:
+  receiver: "noop"
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 2h
+
+  routes:
+    - match:
+        severity: critical
+      receiver: webhook
+
+receivers:
+  - name: noop
+    webhook_configs: []
+  - name: webhook
+    webhook_configs:
+      - send_resolved: true
+        url: "http://127.0.0.1:5001/webhook"

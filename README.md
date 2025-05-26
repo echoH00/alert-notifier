@@ -5,12 +5,12 @@
 
 ## ✨ 特性
 
-- 🚀 接收原始 Alertmanager 告警
-- 📲 异步发送短信通知
-- 🔄 短信发送失败自动重试（默认最多 3 次）
-- 🧵 Worker Pool 设计：自动伸缩，支持空闲自动退出
-- 💥 支持死信队列（Deadletter）：重试失败的告警记录
-- 👥 灵活配置通知接收人
+- ������ 接收原始 Alertmanager 告警
+- ������ 异步发送短信通知
+- ������ 短信发送失败自动重试（默认最多 3 次）
+- ������ Worker Pool 设计：自动伸缩，支持空闲自动退出
+- ������ 支持死信队列（Deadletter）：重试失败的告警记录
+- ������ 灵活配置通知接收人
 
 
 ---
@@ -65,5 +65,6 @@ git clone github.com/echoH00/alert-notifier && cd alert-notifier && make
 # 启动服务 --config指定联系人
 ./alert-notifier --config=/etc/alert-notifier/config.json
 
-部署见deploy/目录
+部署deploy/目录
 ```
+

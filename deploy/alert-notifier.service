@@ -1,0 +1,16 @@
+[Unit]
+Description=Alert Notifier Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/alert-notifier --config=/etc/alert-notifier/config.json
+Restart=on-failure
+RestartSec=5
+#User=alertuser
+WorkingDirectory=/etc/alert-notifier
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
